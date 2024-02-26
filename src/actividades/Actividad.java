@@ -20,5 +20,8 @@ public class Actividad {
         return nombre;
     }
 
+    public boolean esAutorizado(Socio socio) {
+        return true;
+    }
 
 }

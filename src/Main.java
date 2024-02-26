@@ -1,8 +1,6 @@
 import actividades.Actividad;
-import categorias.Socio;
-import categorias.SocioPorActividades;
-import categorias.SocioPorCantActividades;
-import categorias.SocioPrueba;
+import actividades.Pileta;
+import categorias.*;
 
 import java.util.Arrays;
 
@@ -11,7 +9,7 @@ public class Main {
 
         // Lista de actividades
         Actividad musculacionPlantaBaja = new Actividad(100, "Salon PB", "Luciano", "PB");
-        Actividad piletaLibreTarde = new Actividad(21, "Pileta libre por la tarde", "Erica", "Pileta olimpica");
+        Pileta piletaLibreTarde = new Pileta(21, "Pileta libre por la tarde", "Erica", "Pileta olimpica", 3);
         Actividad karateConMarcos = new Actividad(8, "Clases de Karate", "Marcos", "Salon de usos multiples");
 
         // Socios por actividad
@@ -39,5 +37,9 @@ public class Main {
         controlAcceso.autorizar(andreaPack3clases, piletaLibreTarde);
         controlAcceso.autorizar(andreaPack3clases, musculacionPlantaBaja);
 
+        SocioFull melina = new SocioFull(32, "Melina");
+        melina.setRevisionMedica(false);
+
+        controlAcceso.autorizar(melina, piletaLibreTarde);
     }
 }

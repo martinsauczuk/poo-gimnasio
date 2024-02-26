@@ -2,6 +2,9 @@ package categorias;
 
 import actividades.Actividad;
 
+/**
+ *  Puede realizar una cantidad finita de actividades, que se iran descontando a medida que son utilizadas.
+ */
 public class SocioPorCantActividades extends Socio {
 
     private int cantDisponible;
