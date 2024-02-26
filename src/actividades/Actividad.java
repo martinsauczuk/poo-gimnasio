@@ -1,5 +1,6 @@
 package actividades;
 
+import categorias.Cliente;
 import categorias.Socio;
 
 public class Actividad {
@@ -20,7 +21,7 @@ public class Actividad {
         return nombre;
     }
 
-    public boolean esAutorizado(Socio socio) {
+    public boolean esAutorizado(Cliente cliente) {
         return true;
     }
 

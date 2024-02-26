@@ -13,9 +13,13 @@ public class Main {
         Actividad karateConMarcos = new Actividad(8, "Clases de Karate", "Marcos", "Salon de usos multiples");
 
         // Socios por actividad
-        Socio martin = new SocioPorActividades(1, "Martin Sauczuk",
-                Arrays.asList(musculacionPlantaBaja, piletaLibreTarde)
+        Cliente martin = new Cliente(
+                1,
+                "Martin Sauczuk",
+                new SocioPorActividades(Arrays.asList(musculacionPlantaBaja, piletaLibreTarde))
         );
+
+
 
         ControladorIngreso controlAcceso = new ControladorIngreso();
 
@@ -26,18 +30,26 @@ public class Main {
         controlAcceso.autorizar(martin, musculacionPlantaBaja);
 
         // Matias es un socio de prueba, debe poder ingresar una sola vez a una sola clase
-        SocioPrueba socioClasePrueba = new SocioPrueba(12, "Matias");
+        Cliente socioClasePrueba = new Cliente(12, "Matias", new SocioPrueba());
         controlAcceso.autorizar(socioClasePrueba,piletaLibreTarde);
         controlAcceso.autorizar(socioClasePrueba,piletaLibreTarde);
 
         // Andrea solo puede ingresar a 3 clases
-        SocioPorCantActividades andreaPack3clases = new SocioPorCantActividades(21, "Andrea", 3);
-        controlAcceso.autorizar(andreaPack3clases, piletaLibreTarde);
-        controlAcceso.autorizar(andreaPack3clases, karateConMarcos);
-        controlAcceso.autorizar(andreaPack3clases, piletaLibreTarde);
-        controlAcceso.autorizar(andreaPack3clases, musculacionPlantaBaja);
+        Cliente andrea = new Cliente(21, "Andrea", new SocioPorCantActividades(3));
+        controlAcceso.autorizar(andrea, piletaLibreTarde);
+        controlAcceso.autorizar(andrea, karateConMarcos);
+        controlAcceso.autorizar(andrea, piletaLibreTarde);
+        controlAcceso.autorizar(andrea, musculacionPlantaBaja);
 
-        SocioFull melina = new SocioFull(32, "Melina");
+        // Andrea ahora decide pagar la membresia Full y convertirse en SocioFull
+        andrea.setCategoriaSocio(new SocioFull());
+
+        // Validamos que ahora puede ingresar sin problemas a otra clase
+        controlAcceso.autorizar(andrea, musculacionPlantaBaja);
+
+
+        // Ejemplo de uso de la pileta
+        Cliente melina = new Cliente(32, "Melina", new SocioFull());
         melina.setRevisionMedica(false);
 
         controlAcceso.autorizar(melina, piletaLibreTarde);

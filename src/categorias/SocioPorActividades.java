@@ -12,8 +12,7 @@ public class SocioPorActividades extends Socio{
 
     List<Actividad> actividadesPagas;
 
-    public SocioPorActividades(int id, String nombre, List<Actividad> actividadesPagas) {
-        super(id, nombre);
+    public SocioPorActividades(List<Actividad> actividadesPagas) {
         this.actividadesPagas = actividadesPagas;
     }
 

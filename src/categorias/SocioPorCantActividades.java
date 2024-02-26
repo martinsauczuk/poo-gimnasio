@@ -9,8 +9,7 @@ public class SocioPorCantActividades extends Socio {
 
     private int cantDisponible;
 
-    public SocioPorCantActividades(int id, String nombre, int cantDisponible) {
-        super(id, nombre);
+    public SocioPorCantActividades(int cantDisponible) {
         this.cantDisponible = cantDisponible;
     }
 

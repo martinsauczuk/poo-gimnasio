@@ -9,10 +9,6 @@ import java.util.List;
  */
 public class SocioFull extends Socio {
 
-    public SocioFull(int id, String nombre) {
-        super(id, nombre);
-    }
-
     @Override
     public boolean validarActividad(Actividad actividad) {
         return true;

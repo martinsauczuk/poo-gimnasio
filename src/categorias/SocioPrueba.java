@@ -6,14 +6,7 @@ import actividades.Actividad;
  * Puede hacer una sola actividad por unica vez
  */
 public class SocioPrueba extends Socio {
-
     private boolean disponible;
-
-    public SocioPrueba(int id, String nombre) {
-        super(id, nombre);
-        disponible = true;
-    }
-
     @Override
     public boolean validarActividad(Actividad actividad) {
         boolean autorizado;

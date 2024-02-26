@@ -1,5 +1,6 @@
 package actividades;
 
+import categorias.Cliente;
 import categorias.Socio;
 
 public class Pileta extends Actividad {
@@ -11,7 +12,7 @@ public class Pileta extends Actividad {
     }
 
     @Override
-    public boolean esAutorizado(Socio socio) {
-        return socio.isRevisionMedica();
+    public boolean esAutorizado(Cliente cliente) {
+        return cliente.isRevisionMedica();
     }
 }
