@@ -31,3 +31,7 @@ Se necesitan algunos requerimientos extras para el sistema. Se debe hacer un ref
 - El gimnasio ahora cuenta con actividades en la nueva pileta, pero para ingresar a la pilete se debe validar que cada persona que desee participar cuente con una revisión médica. Toda actividad que se realice en la pileta debe exigir este requisito para su ingreso.
 - Todo socio puede ingresar a la pilete si tiene la revisión médica, incluso si es socio de prueba.
 - Para controlar el aforo se debe implementar una cantidad máxima de personas por cada actividad, una vez alcanzada la cantidad máxima, el sistema no debe permitir ingresar a más personas, independientemente de su condición.
+
+# Parte 3
+El gimnasio ya contaba con un sistema para la gestión de los empleados, que no tiene nada que ver con el sistema para los socios. El dueño decide colocar molinetes de acceso para registrar a que hora ingresa y egresa todas las personas. Independientemente si son socios o empleados toda persona debe pasar por el molinete.
+Modificar todo lo necesario pero sin alterar el funcionamiento de ambos sistemas.
